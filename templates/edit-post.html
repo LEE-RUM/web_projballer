@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Edit Post
+{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+  <h1 class="text-center">Edititng <em>"{{post.post_title}}"</em></h1>
+    <form method="post" action=".">
+        {% csrf_token %}
+        <input type="hidden" name="post_id" value="{{post.id}}">
+        {{ form|crispy }}
+
+        <div class="my-3">
+            <button type="reset" class="btn btn-danger">Discard</button>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+
+    </form>
+  </div>
+
+
+
+{% endblock %}
+
+
+
+

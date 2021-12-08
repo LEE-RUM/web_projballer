@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+
+
+    {% for post in posts %}
+
+        <div class="container">
+            <div class="row test">
+                <div class="col-md-6">
+                    <h5><a href="{% url 'detail_post' id=post.id %}"><strong>{{ post.post_title }}</strong></a></h5>
+                    <p class="text-secondary">Posted at: {{ post.created_at }}</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>{{ post.user }}</h5>
+                    {% if post.user == request.user %}
+                        <a href="{% url 'edit_post' %}?post_id={{post.id}}"><i class="fas fa-edit"></i></a>
+                        <a href="{% url 'delete_post' %}?post_id={{post.id}}"><i class="far fa-trash-alt"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+   <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-10">{{ post.post_title }}</div>
+                <div class="col-2">{{ post.user }}</div>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{ post.post }}</p>
+            <a class="btn btn-primary" href="">
+                Reply
+            </a>
+
+
+            {% for comment in comments %}
+                <br>
+                <hr>
+                <div class="row">
+                <div class="col-10">{{ comment.comment }}</div>
+                <div class="col-2">{{ comment.user }}</div>
+                </div>
+                <br>
+            {% endfor %}
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

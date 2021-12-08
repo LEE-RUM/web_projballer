@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    News
+{% endblock %}
+
+{% block body %}
+
+    <h2>Latest Tweets</h2>
+    {% for tweet in tweets %}
+        <div class="container">
+            <div class="row test">
+                <div class="col">
+                    <h5>Tweet Id:<small>{{ tweet.id }}</small></h5>
+                    <p class="ms-4">
+                        {{tweet.text}}
+                    </p>
+                    <p class="text-secondary">Posted at: {{tweet.created_at}}</p>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+
+{% endblock %}
