@@ -2,19 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4c70282-6abe-4c71-afb9-d270ead345a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Finalproj6.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webproj/migrations/0003_rename_comment_comment_content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFinalProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFinalProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/detail_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproj/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproj/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproj/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproj/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproj/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproj/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,9 +35,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nbacares-498" />
   </component>
   <component name="RunManager">
     <configuration name="web_projballer" type="Python.DjangoServer" factoryName="Django server">
@@ -64,10 +76,35 @@
       <option name="presentableId" value="Default" />
       <updated>1645928493035</updated>
       <workItem from="1645928494580" duration="149000" />
+      <workItem from="1645928847743" duration="336000" />
+      <workItem from="1645929715162" duration="2011000" />
+      <workItem from="1645931837847" duration="6936000" />
+      <workItem from="1645949152405" duration="883000" />
+      <workItem from="1645987117215" duration="1203000" />
+      <workItem from="1645997564598" duration="33000" />
+      <workItem from="1646289632925" duration="595000" />
+      <workItem from="1646548149420" duration="118000" />
+      <workItem from="1646548401361" duration="100000" />
+      <workItem from="1646870734235" duration="1530000" />
+      <workItem from="1647377101464" duration="615000" />
+      <workItem from="1647567638009" duration="600000" />
+      <workItem from="1647836163145" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

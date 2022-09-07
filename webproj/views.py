@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.http.response import Http404, HttpResponseForbidden
+from django.http.response import Http404, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib import messages
 from .forms import PostForm, UpdateUserForm, CommentForm
@@ -22,9 +22,19 @@ def webproj(request):
 
 def detail_post(request, id):
     post = Forum.objects.get(id=id)
-    form = CommentForm()
     comments = Comment.objects.filter(post=post)
-    context = {'post': post, 'comments': comments, 'form': form}
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST or None)
+        if comment_form.is_valid():
+            content = request.POST.get('content')
+            comment = Comment.objects.create(post=post, user=request.user, content=content)
+            comment.save()
+            return redirect('detail_post', id=post.id)
+    else:
+        comment_form = CommentForm()
+
+    context = {'post': post, 'comments': comments, 'form': comment_form}
     return render(request, 'detail_post.html', context)
 
 
@@ -173,7 +183,4 @@ def logout_view(request):
     logout(request)
     # user redirected to home page after logging out
     return redirect('webproj')
-
-
-
 

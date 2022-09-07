@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Forum(models.Model):
-
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post_title = models.CharField(max_length=200)
     post = models.TextField()
@@ -13,12 +12,9 @@ class Forum(models.Model):
     def __str__(self):
         return self.post_title
 
-class Comment(models.Model):
 
-    post = models.ForeignKey(Forum,on_delete=models.CASCADE,related_name='comments')
-    comment = models.TextField()
+class Comment(models.Model):
+    post = models.ForeignKey(Forum, on_delete=models.CASCADE, related_name='comments')
+    content = models.TextField(verbose_name="")
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-
-
-

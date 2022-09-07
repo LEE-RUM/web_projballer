@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
 
 {% block title %}
     Home
 {% endblock %}
 
 {% block body %}
-   <div class="card">
+    <div class="card">
         <div class="card-header">
             <div class="row">
                 <div class="col-10">{{ post.post_title }}</div>
@@ -14,17 +16,24 @@
         </div>
         <div class="card-body">
             <p class="card-text">{{ post.post }}</p>
-            <a class="btn btn-primary" href="">
-                Reply
-            </a>
+           <div>
+                <form method="post" action=".">
+                {% csrf_token %}
+                {{ form|crispy}}
 
+                <div class="my-3">
+                    <input type="submit" value="submit">
+                </div>
+
+            </form>
+           </div>
 
             {% for comment in comments %}
                 <br>
                 <hr>
                 <div class="row">
-                <div class="col-10">{{ comment.comment }}</div>
-                <div class="col-2">{{ comment.user }}</div>
+                    <div class="col-10">{{ comment.content }}</div>
+                    <div class="col-2">{{ comment.user }}</div>
                 </div>
                 <br>
             {% endfor %}
